@@ -15,6 +15,14 @@ The Hepatitis dataset consists of 155 data points out of which, 23(20:6) DIE cas
 The retinopathy dataset consists of 1151 data points with 20 attributes each, and no missing values. As with the hepatitis set, we have 19 features for prediction and 1 Class label as target, but many of the features here are unusable. The first, the binary result of quality assessment, is always 1 as only sufficient quality data points were added into the set. The models cannot be built on a constant feature. Additionally, the features 8-15 represent the same information as 2-7, but scaled differently, so there is a high correlation between the two. Equally, each group such as 8-15 are the number of MAs found at different levels of confidence, and tend to be correlated. 
 
 ## Result 
+### KNN
+![1](https://github.com/Sagarnandeshwar/KNN_And_Decision_Tree_Classification/blob/main/images/1.png)
+![2](https://github.com/Sagarnandeshwar/KNN_And_Decision_Tree_Classification/blob/main/images/2.png)
+![3](https://github.com/Sagarnandeshwar/KNN_And_Decision_Tree_Classification/blob/main/images/3.png)
+### Decision Tree
+![4](https://github.com/Sagarnandeshwar/KNN_And_Decision_Tree_Classification/blob/main/images/4.png)
+![5](https://github.com/Sagarnandeshwar/KNN_And_Decision_Tree_Classification/blob/main/images/5.png)
+
 The primary objective of this exercise was to explore the application of two widely used classification methods K-Nearest Neighbors and Decision Tree to real world problems. The results show that the algorithms are able to achieve a high accuracy on both the datasets. We observed that the KNN dataset is sensitive to the scale of the features as the method depends on a distance measure to identify nearest neighbours. The features should be standardised pre-processing the data on KNN. As we increase the value of K, the model starts to generalize better, and we see an increase in test accuracy. Furthermore, we observed that both Euclidean and Manhattan distance measures give almost same results on both the datasets, which is likely due to the low dimensionality of the input. We have tried to increase the number of features used for classification but noticed no significant changes in performance while also breaking all secondary methods such as plotting. 
 
 We can observe a similar pattern for Decision tree models. The decision tree model overfits the training data if we overincrease the depth of the tree. In certain instances, the test accuracy decreases with an increase in maximum depth. A comparison of the the application of different cost functions clearly show that the entropy and Gini Index cost functions achieve a hundred percent training accuracy faster than the misclassification cost. All three methods give comparable accuracy. 
